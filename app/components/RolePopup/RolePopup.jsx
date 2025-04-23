@@ -11,7 +11,6 @@ import { useGameSpies } from '@app/selectors/gameSpies.js';
 export const RolePopup = ({ isOpen, toggle, player, location, role, customLocations }) => {
   const spies = useGameSpies();
   
-  // Filter out the current player from the spies list
   const otherSpies = spies.filter(spy => {
     const spyName = spy.name || spy;
     const playerName = player.name || player;
